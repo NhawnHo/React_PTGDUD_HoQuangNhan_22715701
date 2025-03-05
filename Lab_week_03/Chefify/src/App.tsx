@@ -107,7 +107,7 @@ function App() {
                                 <img src="/Rating11.png" alt="" />
                             </div>
                         </div>
-                        <button className="bg-pink-600 text-white w-72 mb-3">
+                        <button className="bg-pink-600 text-white w-72 mb-3 rounded-lg pt-2 pb-2">
                             Apply
                         </button>
                     </div>
