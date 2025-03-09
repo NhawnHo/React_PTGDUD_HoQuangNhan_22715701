@@ -51,9 +51,7 @@
     grid-template-columns: 1fr 3fr;
     /* gap: 1px; */
 }
-.container > div {
-    background-color: grey;
-}
+
 .container > div.header {
     grid-area: header;
     text-align: center;
@@ -72,7 +70,6 @@
     grid-area: footer;
     background-color: rgb(0, 0, 0);
     border-radius: 10px 10px 0 0;
-
 }
 .flex-container {
     display: flex;
@@ -113,18 +110,16 @@
     color: grey;
     font-size: 10px;
     margin-left: 65px;
-
 }
 .rating > .flex {
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 }
-.errsearch > p{
-  margin-left: 10px;
-  padding: 7px 12px 7px 12px;
-  border-radius: 50px;
-  font-size: 10px;
+.errsearch > p {
+    margin-left: 10px;
+    padding: 7px 12px 7px 12px;
+    border-radius: 50px;
+    font-size: 10px;
 }
-.errsearch{
-  margin-left: 210px;
+.errsearch {
+    margin-left: 210px;
 }
-
