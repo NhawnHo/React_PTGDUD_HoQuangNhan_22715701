@@ -14,16 +14,12 @@ function Footer() {
                             type="text"
                             placeholder="Enter your email..."
                         />
-                        <button className="h-10 mt-3 ml-3  p-2 bg-pink-600">
+                        <button className="h-10 mt-3 ml-3 p-2 bg-pink-600">
                             Send
                         </button>
                     </div>
                     <div className="flex text-xs mt-28 ">
-                        <img
-                            src="/avatar_small.png"
-                            alt=""
-                            width={150}
-                        />
+                        <img src="/avatar_small.png" alt="" width={150} />
                         <p className="ml-4 mt-4">2023 Chefify Company</p>
                         <p className="ml-7 mt-4">
                             Teams of Servicel Privacy Policy
