@@ -5,7 +5,7 @@ function Header() {
         <>
             <div className="flex-container border-b border-gray-200">
                 <div className="flex-item">
-                    <div className=" w-[500px] ml-4">
+                    <div className=" w-[600px] ml-4">
                         <div style={{ float: 'left' }}>
                             <img
                                 src="/avatar_small.png"
