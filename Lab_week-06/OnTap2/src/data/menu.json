@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Bánh mì thịt nướng",
+        "price": 35000,
+        "image": "/src/assets/banhMi.jpg",
+        "description": "Bánh mì thịt nướng ngon tuyệt vời"
+    },
+    {
+        "id": 2,
+        "name": "Bánh ngọt",
+        "price": 25000,
+        "image": "src/assets/banhNgot.jpg",
+        "description": "Bánh ngọt mềm mịn, ngọt dịu"
+    },
+    {
+        "id": 3,
+        "name": "Beef Steak",
+        "price": 150000,
+        "image": "src/assets/beefSteak.jpg",
+        "description": "Bò bít tết thơm ngon, chín vừa"
+    },
+    {
+        "id": 4,
+        "name": "Cá hồi",
+        "price": 120000,
+        "image": "src/assets/caHoi.png",
+        "description": "Cá hồi tươi sống chất lượng cao"
+    },
+    {
+        "id": 5,
+        "name": "Cá hồi sốt cam",
+        "price": 140000,
+        "image": "src/assets/caHoiSotCam.jpg",
+        "description": "Cá hồi sốt cam, vị chua ngọt hòa quyện"
+    },
+    {
+        "id": 6,
+        "name": "Chả giò",
+        "price": 40000,
+        "image": "src/assets/chaGio.jpg",
+        "description": "Chả giò giòn rụm, nhân thơm ngon"
+    },
+    {
+        "id": 7,
+        "name": "Cơm niêu",
+        "price": 50000,
+        "image": "src/assets/comNieu.jpg",
+        "description": "Cơm niêu truyền thống, nóng hổi"
+    },
+    {
+        "id": 8,
+        "name": "Hamburger",
+        "price": 60000,
+        "image": "src/assets/hambuger.jpg",
+        "description": "Hamburger thịt bò Mỹ chính hiệu"
+    },
+    {
+        "id": 9,
+        "name": "Matcha",
+        "price": 45000,
+        "image": "src/assets/mattcha.jpg",
+        "description": "Matcha thơm ngon, béo ngậy"
+    },
+    {
+        "id": 10,
+        "name": "Mì Ý",
+        "price": 80000,
+        "image": "src/assets/miY.jpg",
+        "description": "Mì Ý sốt bò bằm đúng chuẩn"
+    },
+    {
+        "id": 11,
+        "name": "Sushi",
+        "price": 110000,
+        "image": "src/assets/sushi.jpg",
+        "description": "Sushi chuẩn Nhật Bản"
+    },
+    {
+        "id": 12,
+        "name": "Sushi cá hồi",
+        "price": 130000,
+        "image": "src/assets/sushiCaHoi.jpg",
+        "description": "Sushi cá hồi tươi ngon"
+    },
+    {
+        "id": 13,
+        "name": "Thịt nướng",
+        "price": 90000,
+        "image": "src/assets/thitNuong.jpg",
+        "description": "Thịt nướng ướp gia vị đậm đà"
+    },
+    {
+        "id": 14,
+        "name": "Trứng chiên",
+        "price": 25000,
+        "image": "src/assets/trungChien.jpg",
+        "description": "Trứng chiên béo ngậy, hấp dẫn"
+    },
+    {
+        "id": 15,
+        "name": "Panna Cotta",
+        "price": 55000,
+        "image": "src/assets/pannacota.jpg",
+        "description": "Panna Cotta ngọt dịu, thơm béo"
+    }
+]
