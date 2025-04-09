@@ -38,48 +38,48 @@ function Dashboard() {
                         alt="logo"
                         className=" object-contain mb-8"
                     />
-                    <div className="flex text-white  bg-pink-500 p-3 rounded-lg ">
+                    <button className="flex text-white  bg-pink-500 p-3 rounded-lg">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744193358/Squares1_p1bgkp.jpg"
                             alt=""
                         />
                         <p className="ml-3">Dashboard</p>
-                    </div>
-                    <div className="flex text-gray-500 p-3 rounded-lg mt-2">
+                    </button>
+                    <button className="flex text-gray-500 p-3 rounded-lg mt-2 hover:bg-pink-500 hover:text-white transition duration-300">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188611/Folder_x3cfac.png"
                             alt=""
                         />
                         <p className="ml-3">Projects</p>
-                    </div>
-                    <div className="flex text-gray-500 p-3 rounded-lg mt-2 ">
+                    </button>
+                    <button className="flex text-gray-500 p-3 rounded-lg mt-2 hover:bg-pink-500 hover:text-white transition duration-300 ">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188613/Groups_fwim6e.png"
                             alt=""
                         />
                         <p className="ml-3">Teams</p>
-                    </div>
-                    <div className="flex text-gray-500  p-3 rounded-lg mt-2">
+                    </button>
+                    <button className="flex text-gray-500  p-3 rounded-lg mt-2 hover:bg-pink-500 hover:text-white transition duration-300">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188612/Pie_chart_glsklk.png"
                             alt=""
                         />
                         <p className="ml-3">Analytics</p>
-                    </div>
-                    <div className="flex text-gray-500  p-3 rounded-lg mt-2">
+                    </button>
+                    <button className="flex text-gray-500  p-3 rounded-lg mt-2 hover:bg-pink-500 hover:text-white transition duration-300">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188614/Chat_jnllfs.png"
                             alt=""
                         />
                         <p className="ml-3">Message</p>
-                    </div>
-                    <div className="flex text-gray-500 p-3 rounded-lg mt-2">
+                    </button>
+                    <button className="flex text-gray-500 p-3 rounded-lg mt-2 hover:bg-pink-500 hover:text-white transition duration-300">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188614/Code_f14bka.png"
                             alt=""
                         />
                         <p className="ml-3">Integrations</p>
-                    </div>
+                    </button>
                     <div className="justify-items-center bg-sky-100 mt-25 p-3 pt-6 rounded-lg">
                         <img
                             src="https://res.cloudinary.com/duongofji/image/upload/v1744188612/Group_wrjk6h.png"
@@ -88,7 +88,7 @@ function Dashboard() {
                         <p className="font-bold text-xl mt-2">
                             V2.0 is available
                         </p>
-                        <button className="text-blue-500 border w-60 rounded-lg h-10 mt-3">
+                        <button className="text-blue-500 border w-60 rounded-lg h-10 mt-3 hover:bg-blue-500 hover:text-white transition duration-300">
                             Try now
                         </button>
                     </div>
@@ -261,8 +261,11 @@ function Dashboard() {
                             <table className="min-w-full table-auto border border-gray-200 text-sm text-left">
                                 <thead className="bg-gray-100 text-gray-700 uppercase">
                                     <tr className="text-gray-500">
-                                        <th className="p-3">
-                                            <input type="checkbox" />
+                                        <th className="p-3 ">
+                                            <input
+                                                className="w-4 h-4 accent-pink-500 cursor-pointer"
+                                                type="checkbox"
+                                            />
                                         </th>
                                         <th className="p-3">Customer Name</th>
                                         <th className="p-3">Company</th>
@@ -282,7 +285,10 @@ function Dashboard() {
                                                 className="hover:bg-gray-50"
                                             >
                                                 <td className="p-3">
-                                                    <input type="checkbox" />
+                                                    <input
+                                                        type="checkbox"
+                                                        className="w-4 h-4 accent-pink-500 cursor-pointer"
+                                                    />
                                                 </td>
                                                 <td className="p-3 w-[250px]">
                                                     <div className="flex items-center">
