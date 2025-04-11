@@ -85,7 +85,7 @@ function Dashboard() {
                 const startIndex = (currentPage - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 setItemArray(newArray.slice(startIndex, endIndex));
-                alert('Cập nhật thành công!');
+                alert('Cập nhật khách hàng thành công!');
 
                 // Đóng modal
                 setIsModalOpen(false);
