@@ -1,12 +1,6 @@
 import './App.css';
 import Dashboard from './component/Dashboard';
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    NavLink,
-    useLocation,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 
 // Component wrapper vì useLocation không dùng trực tiếp trong App khi dùng Router ngoài
 function AppContent() {
