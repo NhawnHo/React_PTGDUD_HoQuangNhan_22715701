@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import ModelUpdate from './ModelUpdate';
+import ModalAddCustomer from './ModelAddCustomer';
 
 function Dashboard() {
     const [array, setArray] = useState([]);
@@ -6,6 +8,9 @@ function Dashboard() {
     const [page, setPage] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 6;
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
     useEffect(() => {
         fetch('https://67f6518142d6c71cca617d6a.mockapi.io/customer')
@@ -27,6 +32,89 @@ function Dashboard() {
         const startIndex = (p - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         setItemArray(array.slice(startIndex, endIndex));
+    };
+
+    const handleEdit = (item) => {
+        setSelectedItem(item);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleSave = async (updatedItem) => {
+        try {
+            const response = await fetch(
+                `https://67f6518142d6c71cca617d6a.mockapi.io/customer/${updatedItem.id}`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: updatedItem.name,
+                        avatar: updatedItem.avatar,
+                        company: updatedItem.company,
+                    }),
+                },
+            );
+
+            if (response.ok) {
+                const updated = await response.json();
+
+                // Cập nhật danh sách tổng thể
+                const newArray = array.map((item) =>
+                    item.id === updated.id ? updated : item,
+                );
+
+                setArray(newArray);
+
+                // Cập nhật lại phần hiển thị theo trang hiện tại
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                setItemArray(newArray.slice(startIndex, endIndex));
+
+                // Đóng modal
+                setIsModalOpen(false);
+            } else {
+                console.error('Lỗi khi cập nhật:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Lỗi PUT API:', error);
+        }
+    };
+    const handleAddCustomer = async (newCustomer) => {
+        try {
+            const response = await fetch(
+                'https://67f6518142d6c71cca617d6a.mockapi.io/customer',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newCustomer),
+                },
+            );
+
+            if (response.ok) {
+                const added = await response.json();
+
+                const newArray = [...array, added];
+                setArray(newArray);
+
+                // Cập nhật lại dữ liệu hiển thị trong trang hiện tại
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                setItemArray(newArray.slice(startIndex, endIndex));
+
+                setIsAddModalOpen(false); // đóng modal sau khi thêm
+            } else {
+                console.error('Lỗi khi thêm khách hàng:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Lỗi POST API:', error);
+        }
     };
 
     return (
@@ -239,7 +327,10 @@ function Dashboard() {
                                 </p>
                             </div>
                             <div className="flex justify-end">
-                                <button className="flex border border-pink-500 text-pink-500 rounded-lg px-3 py-2">
+                                <button
+                                    className="flex border border-pink-500 text-pink-500 rounded-lg px-3 py-2"
+                                    onClick={() => setIsAddModalOpen(true)}
+                                >
                                     <img
                                         src="https://res.cloudinary.com/duongofji/image/upload/v1744188611/Download_qoyc0m.png"
                                         alt="import"
@@ -247,6 +338,12 @@ function Dashboard() {
                                     />
                                     <p className="ml-1">Import</p>
                                 </button>
+                                <ModalAddCustomer
+                                    isOpen={isAddModalOpen}
+                                    onClose={() => setIsAddModalOpen(false)}
+                                    onAdd={handleAddCustomer}
+                                />
+
                                 <button className="flex border border-pink-500 text-pink-500 rounded-lg px-3 py-2 ml-3">
                                     <img
                                         src="https://res.cloudinary.com/duongofji/image/upload/v1744188612/Move_up_deiiqh.png"
@@ -327,11 +424,18 @@ function Dashboard() {
                                                     </span>
                                                 </td>
                                                 <td className="p-3 text-right">
-                                                    <img
-                                                        src="https://res.cloudinary.com/duongofji/image/upload/v1744188614/create_qj44ru.png"
-                                                        alt="Action"
-                                                        className="h-5 inline"
-                                                    />
+                                                    <button
+                                                        className="text-pink-500 hover:underline"
+                                                        onClick={() =>
+                                                            handleEdit(item)
+                                                        }
+                                                    >
+                                                        <img
+                                                            src="https://res.cloudinary.com/duongofji/image/upload/v1744188614/create_qj44ru.png"
+                                                            alt="Action"
+                                                            className="h-5 inline"
+                                                        />
+                                                    </button>
                                                 </td>
                                             </tr>
                                         ))
@@ -347,6 +451,13 @@ function Dashboard() {
                                     )}
                                 </tbody>
                             </table>
+                            {/* Gọi Modal */}
+                            <ModelUpdate
+                                isOpen={isModalOpen}
+                                onClose={handleCloseModal}
+                                onSave={handleSave}
+                                item={selectedItem}
+                            />
                         </div>
                         <div className="grid grid-cols-2 mt-5">
                             <p className="text-gray-500">
