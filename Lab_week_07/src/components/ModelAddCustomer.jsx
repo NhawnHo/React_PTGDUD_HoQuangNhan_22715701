@@ -32,8 +32,8 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
             status,
         };
 
-      onAdd(newUser);
-      alert('Thêm khách hàng thành công!');
+        onAdd(newUser);
+        alert('Thêm khách hàng thành công!');
         onClose();
 
         // Reset input

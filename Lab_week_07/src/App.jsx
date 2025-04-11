@@ -1,6 +1,6 @@
 import './App.css';
-import Menu from './component/Menu';
-import Header from './component/Header';
+import Menu from './components/Menu';
+import Header from './components/Header';
 import DashboardDetail from './pages/DashboardDetail';
 import Projects from './pages/Projects';
 import Teams from './pages/Teams';
@@ -21,7 +21,7 @@ export default function App() {
                     <div className="grid grid-cols-2 h-20 pt-5.5 border-b border-b-gray-200">
                         <Header />
                     </div>
-                    {/* Router điều hướng */}
+                    {/* Router xử lý điều hướng */}
                     <div>
                         <Routes>
                             <Route
@@ -29,7 +29,13 @@ export default function App() {
                                 element={<DashboardDetail />}
                             />
                             <Route path="/projects" element={<Projects />} />
-                            
+                            <Route path="/teams" element={<Teams />} />
+                            <Route path="/analytics" element={<Analytics />} />
+                            <Route path="/message" element={<Message />} />
+                            <Route
+                                path="/integrations"
+                                element={<Integrations />}
+                            />
                         </Routes>
                     </div>
                 </div>

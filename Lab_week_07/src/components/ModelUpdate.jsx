@@ -15,8 +15,8 @@ const ModelUpdate = ({ isOpen, onClose, onSave, item }) => {
         }
     }, [item]);
 
-  return (
-      // dùng AnimatePresence của framer-motion để xử lý hiệu ứng khi mở và đóng modal
+    return (
+        // dùng AnimatePresence của framer-motion để xử lý hiệu ứng khi mở và đóng modal
         <AnimatePresence>
             {isOpen && (
                 <motion.div

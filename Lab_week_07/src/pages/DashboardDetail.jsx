@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import ModelUpdate from '../component/ModelUpdate';
-import ModalAddCustomer from '../component/ModelAddCustomer';
-import Menu from '../component/Menu';
-import Header from '../component/Header';
+import ModelUpdate from '../components/ModelUpdate';
+import ModalAddCustomer from '../components/ModelAddCustomer';
+import Menu from '../components/Menu';
+import Header from '../components/Header';
 
 function Dashboard() {
     const [overView, setOverView] = useState([]);
@@ -85,7 +85,7 @@ function Dashboard() {
                 const startIndex = (currentPage - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 setItemArray(newArray.slice(startIndex, endIndex));
-                alert('Cập nhật khách hàng thành công!');
+                alert('Cập nhật thành công!');
 
                 // Đóng modal
                 setIsModalOpen(false);
