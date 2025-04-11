@@ -1,40 +1,45 @@
 import './App.css';
-import Dashboard from './component/Dashboard';
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import Menu from './component/Menu';
+import Header from './component/Header';
+import DashboardDetail from './pages/DashboardDetail';
+import Projects from './pages/Projects';
+import Teams from './pages/Teams';
+import Analytics from './pages/Analytics';
+import Message from './pages/Message';
+import Integrations from './pages/Integrations';
 
-// Component wrapper vì useLocation không dùng trực tiếp trong App khi dùng Router ngoài
-function AppContent() {
-    const location = useLocation();
-
-    return (
-        <div className="p-4">
-            {/* Menu điều hướng */}
-            <nav className="mt-10 text-2xl font-bold text-center">
-                {location.pathname !== '/dashboard' && (
-                    <NavLink
-                        to="/dashboard"
-                        className={({ isActive }) =>
-                            isActive
-                                ? 'text-pink-500 font-bold mr-4'
-                                : 'text-gray-500 hover:text-pink-500 mr-4'
-                        }
-                    >
-                        Dashboard
-                    </NavLink>
-                )}
-            </nav>
-
-            <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
-            </Routes>
-        </div>
-    );
-}
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 export default function App() {
     return (
         <BrowserRouter>
-            <AppContent />
+            <div className="grid grid-cols-10 container mx-auto shadow-2xl items-stretch">
+                <div className="grid col-span-2 p-5 border-r border-r-gray-200 ">
+                    <Menu />
+                </div>
+                <div className="self-start grid col-span-8">
+                    <div className="grid grid-cols-2 h-20 pt-5.5 border-b border-b-gray-200">
+                        <Header />
+                    </div>
+                    {/* Router xử lý điều hướng */}
+                    <div>
+                        <Routes>
+                            <Route
+                                path="/dashboard"
+                                element={<DashboardDetail />}
+                            />
+                            <Route path="/projects" element={<Projects />} />
+                            <Route path="/teams" element={<Teams />} />
+                            <Route path="/analytics" element={<Analytics />} />
+                            <Route path="/message" element={<Message />} />
+                            <Route
+                                path="/integrations"
+                                element={<Integrations />}
+                            />
+                        </Routes>
+                    </div>
+                </div>
+            </div>
         </BrowserRouter>
     );
 }
