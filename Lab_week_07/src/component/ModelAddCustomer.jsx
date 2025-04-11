@@ -45,7 +45,7 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
 
     return (
         <div className="fixed inset-0 backdrop-blur-sm bg-white/10 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-2xl shadow-2xl relative w-[500px] max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-2xl shadow-2xl relative w-[600px] px-10 py-8">
                 <button
                     className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-2xl"
                     onClick={onClose}
@@ -62,7 +62,9 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 />
 
                 <label className="block mb-2 font-bold">Avatar URL</label>
@@ -70,7 +72,9 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
                     type="text"
                     value={avatar}
                     onChange={(e) => setAvatar(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 />
 
                 <label className="block mb-2 font-bold">Company</label>
@@ -78,7 +82,9 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
                     type="text"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 />
 
                 <label className="block mb-2 font-bold">Order Value</label>
@@ -86,7 +92,9 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
                     type="number"
                     value={orderValue}
                     onChange={(e) => setOrderValue(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 />
 
                 <label className="block mb-2 font-bold">Order Date</label>
@@ -94,14 +102,18 @@ const ModalAddCustomer = ({ isOpen, onClose, onAdd }) => {
                     type="date"
                     value={orderDate}
                     onChange={(e) => setOrderDate(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 />
 
                 <label className="block mb-2 font-bold">Status</label>
                 <select
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
-                    className="border border-gray-300 p-2 rounded w-full mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300"
+                    className="border border-gray-300 p-2 rounded w-full mb-4 
+                    focus:outline-none focus:ring-2 focus:ring-pink-300
+                    transition duration-200 ease-in-out hover:ring-2 hover:ring-pink-300"
                 >
                     <option value="">-- Chọn trạng thái --</option>
                     <option value="New">New</option>
