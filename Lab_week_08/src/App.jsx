@@ -4,6 +4,7 @@ import Hero from './component/Hero';
 import RecipeSection from './component/RecipeSection';
 import EditorPick from './component/EditorPick';
 import Footer from './component/Footer';
+import RecipesWithVideos from './component/RecipesWithVideos';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Header />
                 <Hero />
                 <RecipeSection />
+                <RecipesWithVideos />
                 <EditorPick />
                 <Footer />
             </div>

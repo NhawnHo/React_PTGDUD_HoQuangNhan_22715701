@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function RecipeSection() {
+function RecipesWithVideos() {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -13,13 +13,13 @@ function RecipeSection() {
     return (
         <section className="px-6 py-10 bg-white">
             <h2 className="text-2xl font-bold text-pink-600 text-center mb-2">
-                This Summer Recipes
+                Recipes With Videos
             </h2>
             <p className="text-center text-gray-500 mb-6">
-                We have all your Independence Day sweets covered.
+                Cooking Up Culinary Creations with Step-by-Step Videos
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {recipes.slice(0, 4).map((item) => (
+                {recipes.slice(8, 12).map((item) => (
                     <div
                         key={item.id}
                         className="bg-white rounded-xl shadow hover:shadow-md transition"
@@ -50,4 +50,4 @@ function RecipeSection() {
     );
 }
 
-export default RecipeSection;
+export default RecipesWithVideos;
