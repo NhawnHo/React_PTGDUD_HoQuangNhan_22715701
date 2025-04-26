@@ -1,11 +1,11 @@
-import './App.css';
+
 import Banner from './components/Banner';
 import ContentSection from './components/ContentSection';
 import Header from './components/Header';
 import NavHeader from './components/NavHeader';
 import OrganizationalStructure from './components/OrganizationalStructure';
 import UniversityFooter from './components/UniversityFooter';
-
+import './App.css';
 function App() {
     return (
         <>
