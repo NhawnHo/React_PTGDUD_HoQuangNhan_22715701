@@ -173,7 +173,7 @@ const OrganizationalStructure = () => {
                     <div className="flex space-x-4">
                         <div className="w-1/2">
                             <img
-                                src="./src/assets/image1.png"
+                                src="./src/assets/tintuc.png"
                                 alt="Sự kiện"
                                 className="mb-2"
                             />
@@ -191,7 +191,7 @@ const OrganizationalStructure = () => {
                         </div>
                         <div className="w-1/2">
                             <img
-                                src="./src/assets/image1.png"
+                                src="./src/assets/tintuc.png"
                                 alt="Sự kiện"
                                 className="mb-2"
                             />
@@ -245,7 +245,7 @@ const OrganizationalStructure = () => {
                     <div className="flex space-x-4">
                         <div className="w-1/2">
                             <img
-                                src="./src/assets/image.png"
+                                src="./src/assets/hoptac.png"
                                 alt="Hợp tác"
                                 className="mb-2"
                             />
@@ -260,7 +260,7 @@ const OrganizationalStructure = () => {
                         </div>
                         <div className="w-1/2">
                             <img
-                                src="./src/assets/image.png"
+                                src="./src/assets/hoptac.png"
                                 alt="Hợp tác"
                                 className="mb-2"
                             />
