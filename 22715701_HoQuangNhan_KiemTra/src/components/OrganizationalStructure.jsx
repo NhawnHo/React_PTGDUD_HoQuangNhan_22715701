@@ -209,7 +209,72 @@ const OrganizationalStructure = () => {
                     </div>
                 </div>
 
-                
+                {/* Phần Tuyển Sinh */}
+                <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                        TUYỂN SINH
+                    </h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Thông báo tuyển sinh đại học liên thông từ trình
+                                độ cao đẳng lên trình độ đại học, Đợt 1 năm 2025
+                                28-03-2025
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Thông báo v/v tuyển sinh đại học văn bằng hai,
+                                Đợt 1 năm 2025 20-03-2025
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Phần Hợp Tác Quốc Tế */}
+                <div>
+                    <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                        HỢP TÁC QUỐC TẾ
+                    </h3>
+                    <div className="flex space-x-4">
+                        <div className="w-1/2">
+                            <img
+                                src="https://via.placeholder.com/300x200"
+                                alt="Hợp tác"
+                                className="mb-2"
+                            />
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Sôi nổi hoạt động Gương Thành phố lưu văn hóa,
+                                khoa học sinh viên nước...
+                            </a>
+                            <p className="text-gray-600 text-sm">24-03-2025</p>
+                        </div>
+                        <div className="w-1/2">
+                            <img
+                                src="https://via.placeholder.com/300x200"
+                                alt="Hợp tác"
+                                className="mb-2"
+                            />
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Đại học Công nghệ TP.HCM tham gia dự án Green
+                                Edu Seeds của quý Erasmus 19-03-2025
+                            </a>
+                            <p className="text-gray-600 text-sm">24-03-2025</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
