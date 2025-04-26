@@ -115,7 +115,102 @@ const OrganizationalStructure = () => {
                 </ul>
             </div>
 
-            
+            {/* Nội dung bên phải */}
+            <div className="w-3/4 p-6">
+                {/* Phần Thông Báo */}
+                <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                        THÔNG BÁO
+                    </h3>
+                    <ul className="space-y-2">
+                        <li className="flex items-center">
+                            <span className="text-red-600 mr-2">🔥</span>
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Thông báo v/v kế hoạch nghỉ hè đối với sinh viên
+                                năm 2024
+                            </a>
+                            <span className="ml-2 text-red-600 text-sm">
+                                [MỚI]
+                            </span>
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-red-600 mr-2">🔥</span>
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Thông báo tuyển chọn nhóm sinh thực hiện đề tài
+                                cho học sinh, sinh viên đại học Cần Thơ năm
+                                2024-2025
+                            </a>
+                            <span className="ml-2 text-red-600 text-sm">
+                                [MỚI]
+                            </span>
+                        </li>
+                        <li className="flex items-center">
+                            <span className="text-red-600 mr-2">🔥</span>
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Đại học Công nghệ... 25-04-2025
+                            </a>
+                            <span className="ml-2 text-red-600 text-sm">
+                                [MỚI]
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Phần Tin Tức - Sự Kiện */}
+                <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                        TIN TỨC - SỰ KIỆN
+                    </h3>
+                    <div className="flex space-x-4">
+                        <div className="w-1/2">
+                            <img
+                                src="https://via.placeholder.com/300x200"
+                                alt="Sự kiện"
+                                className="mb-2"
+                            />
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                AVETA tại triển giới phần mềm trí giá 180.000 ĐS
+                                Mỹ
+                            </a>
+                            <p className="text-gray-600 text-sm">
+                                Hội nghị Khoa học Quốc tế BẮC 2025 lần 2 tại
+                                TP.HCM - Sức mạnh AI trong... 22-04-2025
+                            </p>
+                        </div>
+                        <div className="w-1/2">
+                            <img
+                                src="https://via.placeholder.com/300x200"
+                                alt="Sự kiện"
+                                className="mb-2"
+                            />
+                            <a
+                                href="#"
+                                className="text-gray-800 hover:text-blue-600"
+                            >
+                                Đại học Công nghệ TP.HCM tham gia dự án Green
+                                Edu Seeds của quý Erasmus 19-03-2025
+                            </a>
+                            <p className="text-gray-600 text-sm">
+                                Học sinh viên năng... 24-03-2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
     );
 };
